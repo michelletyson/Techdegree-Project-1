@@ -65,23 +65,22 @@ random_bg_color();
   /* Create a function named printQuote */
 
   function printQuote() {
-    var result = getRandomQuote(quotes);                            /* Calls the getRandomQuote function */
-    var message = "";                                              /* Created a variable to set it to an empty string */
+    var result = getRandomQuote(quotes);                            //Calls the getRandomQuote function */
+    var message = "";                                              //Created a variable to set it to an empty string 
     message = "<p class='quote'>" + result.quote + "</p>";        
     message += "<p class='source'>" + result.source;
     if (result.citation) {
-      message += "<span class='citation'>" + result.citation + "</span>";
+      message += "<span class='citation'>" + result.citation + "</span>";  // if condition is true show citation
     }
     if (result.year) {
       message += "<span class='year'>" + result.year + "</span>"
     }
     message += "</p>";
     document.getElementById('quote-box').innerHTML = message;     /* Set inner HTML to the HTML string */
-
   }
     
-
   console.log(printQuote);
+
 
 /*
 The event listener will be triggered and it will call, or "invoke", the 'printQuote' 
