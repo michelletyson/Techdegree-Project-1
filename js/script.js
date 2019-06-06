@@ -1,3 +1,6 @@
+// Michelle Tyson - Tech degree - Project 1
+
+
 /*Created a variable named quotes and inserted quotes in the array. */
 
 var quotes = [ 
@@ -77,7 +80,11 @@ random_bg_color();
     }
     message += "</p>";
     document.getElementById('quote-box').innerHTML = message;     /* Set inner HTML to the HTML string */
-  }
+
+    
+    var result = random_bg_color()                              // Calls the random background colors
+
+}
     
   console.log(printQuote);
 

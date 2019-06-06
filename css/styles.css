@@ -5,7 +5,7 @@
 
 body {
   background-color: #36b55c;
-  color: white;
+  color: rgb(40, 4, 54);
   font-family: 'Playfair Display', serif;
 }
 
@@ -78,10 +78,10 @@ body {
   left: 50%;
   margin-left: -6em;
   bottom: 150px;
-  border-radius: 4px;
-  border: 2px solid #fff;
-  color: #fff;
-  background-color: #36b55c;
+  border-radius: 25px;
+  border: 3px solid rgb(29, 3, 28);
+  color: rgb(0, 1, 10);
+  background-color: #df2b61;
   padding: 15px 0;
   transition: .5s ;
 }
