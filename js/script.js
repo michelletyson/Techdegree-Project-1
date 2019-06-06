@@ -1,23 +1,23 @@
-/*Create a variable named quotes and insert quotes in the array. */
+/*Created a variable named quotes and inserted quotes in the array. */
 
 var quotes = [ 
   { 
     quote: "Tough times never last, but tough people do",
-    source: "Robert H. Schuller",           /* Add 'source' property  to quote object*/
-    citation: "Book",
-    year: "1984"
+    source: "Robert H. Schuller",           /* Added 'source' property  to quote object*/
+    citation: "Book",                       /* Added 'citatiom' property to quote object */
+    year: "1984"                            /* Added 'year' propert to quote object */
   }, 
   { 
     quote: "Whoever does not love does not know God, because God is love.",
     source: "1 John 4:8.",
     citation: "Bible",
-    categoration: "Love"
+    category: "Love"
   }, 
   { 
     quote: "Above all, love each other deeply, because love covers over a multitude of sins.",
     source: "1 Peter 4:8",
     citation: "Bible",
-    categoration: "Love"
+    category: "Love"
   }, 
   { 
     quote: "For we walk by faith, not by sight.",
@@ -27,45 +27,34 @@ var quotes = [
   { 
     quote: "A truly strong person does not need the approval of others any more than a lion needs the approval of sheep.",
     source: "Vernon Howard",
-    categoration: "Strength"
+    category: "Motivation"
 }
 ];
 
 console.log(quotes);
 
 
-   /*Change background color randomly */
+/* random background color*/
 
-   const button = document.getElementsByTagName('button')[0];
-button.addEventListener('click', () => {
-  document.body.style.backgroundColor = colors();
-});
+function random_bg_color() {
+  var x = Math.floor(Math.random() * 256);
+  var y = Math.floor(Math.random() * 256);
+  var z = Math.floor(Math.random() * 256);
+  var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+console.log(bgColor);
 
-function colors() {
-  let colorArray = [];    
-
-  for(let i =0; i < 3 ; i++){
-    colorArray.push(Math.floor(Math.random() * (255 - 0) + 0));
+  document.body.style.background = bgColor;
   }
-  // rgb -> hex
-  let color = colorArray
-    .map( x => x.toString(16))
-    .join('');
 
-  return `#${color}`;
-}
+random_bg_color();
 
+ 
 
-setTimeout(function() {
-  location.reload();
-}, 10000);
-
-
-  /*Create a function named getRandomQuote. */
+  /*Created a function named getRandomQuote. */
 
   function getRandomQuote(array) {
-    var RandomNumber = Math.floor( Math.random() * quotes.length);      /* Random number generator */
-    var randomQuote = array[RandomNumber];                             /* Random quote variable */
+    var RandomNumber = Math.floor( Math.random() * quotes.length);      /* Created a Random number generator */
+    var randomQuote = array[RandomNumber];                             /* Created a Random quote variable */
     
     return quotes[RandomNumber];                                      /* Return quote */
   }
@@ -76,8 +65,8 @@ setTimeout(function() {
   /* Create a function named printQuote */
 
   function printQuote() {
-    var result = getRandomQuote(quotes);                            /* Call the getRandomQuote function */
-    var message = "";                                              /* Create variable and set it to an empty string */
+    var result = getRandomQuote(quotes);                            /* Calls the getRandomQuote function */
+    var message = "";                                              /* Created a variable to set it to an empty string */
     message = "<p class='quote'>" + result.quote + "</p>";        
     message += "<p class='source'>" + result.source;
     message += "<span class='citation'>" + result.citation + "</span>";
@@ -98,5 +87,4 @@ document.getElementById('loadQuote').addEventListener("click", printQuote, false
 
 
 
-
-
+ 
