@@ -47,15 +47,15 @@ var quotes = [
 
   function bg_color_random()
   {
-  var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-    document.body.style.backgroundColor = randomColor;
+  var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);  // Creates random number between 0 - 16777215 
+    document.body.style.backgroundColor = randomColor;          // Changes the bg color to a random color
   }
 
   // printQuote function
 
   function printQuote() {
-    bg_color_random();                                              // Calls random background color
-    var message = "";                                               // variable to set to an empty string 
+    bg_color_random();                                              // Calls random bg color
+    var message = "";                                               // Variable set to an empty string 
     var result = getRandomQuote(quotes);                            // Calls the getRandomQuote function 
     message += "<p class='quote'>" + result.quote + "</p>";        
     message += "<p class='source'>" + result.source;
